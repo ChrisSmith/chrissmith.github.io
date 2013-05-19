@@ -48,7 +48,7 @@ ul.posts li {
   line-height: 1.75em;
 }
 
-ul.posts span {
+ul.posts span, ul.posts div {
   color: #aaa;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
@@ -61,9 +61,8 @@ ul.posts span {
 /*****************************************************************************/
 
 .site {
-  font-size: 115%;
   text-align: justify;
-  width: 42em;
+  width: 1020px;
   margin: 3em auto 2em;
   line-height: 1.5em;
 }
@@ -102,9 +101,9 @@ ul.posts span {
 .site .footer {
   font-size: 80%;
   color: #666;
-  border-top: 4px solid #eee;
   margin-top: 2em;
   overflow: hidden;
+  clear: both;
 }
 
 .site .footer .contact {
@@ -125,6 +124,29 @@ ul.posts span {
 .site .footer .rss img {
   border: 0;
 }
+
+.content {
+  float: left;
+  width: 700px;
+  min-height: 600px;
+  margin-bottom: 40px;
+  border-right: 1px solid #e8e8e8;
+}
+
+.content-inner {
+  padding: 0 25px 0 0;
+}
+
+
+.sidebar {
+  float: right;
+  width: 300px;
+}
+  .sidebar-content {
+    padding-left: 30px;
+
+  }
+
 
 /*****************************************************************************/
 /*
