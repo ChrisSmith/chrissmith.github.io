@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width">
 
         {% css_asset_tag global %}
+          - /_assets/reset.less
           - /_assets/main.less
+          - /_assets/post.less
           - /_assets/syntax.css
         {% endcss_asset_tag %}
 
@@ -22,14 +24,21 @@
         <div class="container">
           <div class="site">
             <div class="header">
-              <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+              <div class="title"><a href="/">{{ site.name }}</a></div>
+              <div class="subtitle">{{ page.subtitle }}</div>
             </div>
             
             <div class="sidebar">
               <div class="sidebar-content">
-                <p>Chris Smith <br />
-                    <a href="http://github.com/chrissmith/">github.com/chrissmith</a><br />
-                    <a href="http://twitter.com/collegelabs/">twitter.com/collegelabs</a><br />
+                <h4>by Chris Smith</h4>
+                <p>
+                    I work at <a href="http://zocdoc.com">ZocDoc</a>.
+                    <br /> Opinions are my own. 
+                    <br />
+                    <a href="http://github.com/chrissmith/">github.com/chrissmith</a>
+                    <br />
+                    <a href="http://twitter.com/collegelabs/">twitter.com/collegelabs</a>
+                    <br />
                 </p>
               </div>  
             </div>
@@ -41,10 +50,6 @@
             </div>
             
             <div class="footer">
-              <div class="contact">
-                <p>Chris Smith<br />
-                </p>
-              </div>
               <div class="contact">
                 
               </div>

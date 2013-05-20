@@ -1,0 +1,56 @@
+@import "_assets/elements.less";
+@import "_assets/sizes.less";
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 30px;
+
+  li {
+    h1, h2, h3, h4, h5, h6{ color: @blue; }
+    .date{
+      color: @lightGray;
+      font-size: 12px;
+    }
+  }
+
+  span, div {
+    color: @lightGray;
+    font-family: Monaco, "Courier New", monospace;
+    font-size: 80%;
+  }
+}
+
+#post {
+  p { 
+    color: #666666;
+    margin: 1em 0; 
+  }
+
+  pre {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 10px;
+  }
+
+  ul, ol {
+    margin-left: 1.35em;
+  }
+  code {
+    border: 1px solid #ddd;
+    background-color: #eef;
+    padding: 0 .2em;
+  }
+  pre code {
+    border: none;
+  }
+  /* terminal */
+  pre.terminal {
+    border: 1px solid #000;
+    background-color: #333;
+    color: #FFF;
+   
+    code {
+      background-color: #333;
+    }
+  }  
+}

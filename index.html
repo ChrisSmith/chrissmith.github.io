@@ -1,17 +1,21 @@
 ---
 layout: default
 title: Did u Restart - Chris Smith
+subtitle: I'm totally serious
 ---
 
 <div id="home">
-  <h1>Recent Posts</h1>
+  <h3>Recent Posts</h3>
   <ul class="posts">
     {% for post in site.posts %}
       <li>
+          <span class="date">{{post.date | date_to_string }}</span> 
       		<a href="{{ post.url }}">
           <h2 class="title">{{ post.title }}</h2>
-      		<div class="excerpt">{{ post.excerpt }}</div>
-          <div class="date">{{post.date | date_to_string }}</div>
+          <div class="excerpt">
+            
+            {{ post.excerpt }}
+          </div>
           </a>
       </li>
       
