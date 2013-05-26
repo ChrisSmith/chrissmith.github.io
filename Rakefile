@@ -1,7 +1,7 @@
 require 'Jekyll'
 require 'tmpdir'
 
-GITHUB_REPONAME = "chris.smith/chris.smith.github.io"
+GITHUB_REPONAME = "ChrisSmith/chrissmith.github.io"
 
 
 desc "Generate blog files"
