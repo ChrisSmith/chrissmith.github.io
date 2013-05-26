@@ -1,3 +1,5 @@
+require 'Jekyll'
+require 'tmpdir'
 
 GITHUB_REPONAME = "chris.smith/chris.smith.github.io"
 
