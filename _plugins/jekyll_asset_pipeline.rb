@@ -6,7 +6,7 @@ module JekyllAssetPipeline
     
     require 'less'
 
- 	def self.filetype
+ 	  def self.filetype
       '.less'
     end
  
