@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 import datetime
 import sys
@@ -8,6 +10,10 @@ def defaultcontent(title):
    return default
 
 title = " ".join(sys.argv[1:])
+if len(title) == 0:
+   print("please enter a title")
+   exit(0)
+
 titleDashed = title.replace(' ', '-')
 date = datetime.date.today().strftime("%Y-%m-%d")
 filename = "/Users/chris/blog/didurestart/_posts/%s-%s.md" % (date, titleDashed)
