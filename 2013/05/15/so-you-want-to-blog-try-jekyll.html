@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>So you want to blog, try Jekyll!</title>
+        <meta name="viewport" content="width=device-width">
+
+        <link href='/assets/global-1d8e495bfa7207f24df4558bcd0ae556.css' rel='stylesheet' type='text/css' />
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src='/assets/global-f17f9f4ed9196f16273ddbb4c3699d99.js' type='text/javascript'></script>
+
+
+    </head>
+    <body>
+
+        <div class="container">
+          <div class="site">
+            <div class="header">
+              <div class="title"><a href="/">DidURestart</a></div>
+              <div class="subtitle"></div>
+            </div>
+            
+            <div class="sidebar">
+              <div class="sidebar-content">
+                <h4>Chris Smith</h4>
+                <p>
+                    I work at <a href="http://zocdoc.com">ZocDoc</a>. 
+                    <br /> I hack on cool things.
+                    <br /> Opinions are my own. 
+                    <br />
+                    <a href="http://github.com/chrissmith/">github.com/chrissmith</a>
+                    <br />
+                    <a href="http://twitter.com/collegelabs/">twitter.com/collegelabs</a>
+                    <br />
+                </p>
+              </div>  
+            </div>
+
+            <div class="content">
+              <div class="content-inner">
+                <h1>So you want to blog, try Jekyll!</h1>
+<p class="date">15 May 2013</p>
+
+<div id="post">
+<p>So I&#8217;ve decided to start writing in hope that my ramblings may serve some utility to someone, and this is the meta post that describes how this blog come into existence. Deciding to actually write something that the world could read is a pretty significant step for a introvert like myself, but its only the beginning of the rather tedious process that is &#8216;setting up a blog.&#8217; Don&#8217;t get me wrong, there are a <strong>ton</strong> of options out there, and well, that&#8217;s kinda the problem. Just off the top of my head:</p>
+
+<ul>
+<li>Tumblr</li>
+
+<li>Wordpress</li>
+
+<li>Blogger</li>
+
+<li>Joomla</li>
+
+<li>Drupal</li>
+
+<li>Posterous</li>
+
+<li>DIY Random linux box hosted someplace</li>
+</ul>
+
+<p>Many of which I picked some fault with and decided I couldn&#8217;t use. The big CMS systems are <strong>huge</strong> complicated monstrosities with tons of &#8216;features&#8217; I would never use, and like a DIY project I would need to setup and maintain a server or fork over some cash for someone else to do it for me. On the services side of blogging: Posterous was recently <a href='http://techcrunch.com/2013/02/15/posterous-will-shut-down-on-april-30th-co-founder-garry-tan-launches-posthaven-to-save-your-sites/'>acquired by Twitter</a>, Yahoo is <a href='http://online.wsj.com/article/SB10001424127887324787004578493130789235150.html'>buying up Tumblr</a> and Google has been <a href='http://www.theverge.com/2013/3/13/4101144/google-shuts-down-reader-rss-aggregation-service'>killing off products with no revenue stream</a> so basically the Internet is imploding and gosh darn it I better build myself a shelter. No way am I spending valuable time composing my thoughts into something cohesive only to have them fade into the ether in a few years when your hot awesome startup gets aquihired (because let&#8217;s face it, your team is better than your business model).</p>
+
+<h2 id='enter_jekyll'>Enter Jekyll</h2>
+
+<p>Convinced I shouldn&#8217;t rely on an external service and refused to write plain html, I took a closer look at Jekyll.</p>
+
+<ul>
+<li>Posts are written in a simple format, I chose <a href='http://daringfireball.net/projects/markdown/'>markdown</a></li>
+
+<li>Template based reuse</li>
+
+<li>html/css/js is generated at &#8216;build&#8217; time</li>
+
+<li>No database dependency</li>
+
+<li>Additional functionality via plugins (ruby code)</li>
+</ul>
+
+<p>Since Jekyll generates static html pages you can host your site however you like, typically either Amazon&#8217;s S3 service, a Linux VM running Nginx/Apache or <a href='http://pages.github.com/'>Github Pages</a>. For the time being I&#8217;ve chosen Github Pages, but I do have some reservations about using a third party service; mostly availability of the site and page performance. However, given that Jekyll only generates static pages and is not necessary to serve the website, I&#8217;m happy to make these compromises until they&#8217;re a real problem and I&#8217;m forced to administer my own server.</p>
+
+<p>The build process is completely painless and you can even setup a continuous build that runs everytime a file changes; this is the &#8211;watch flag. <strong>jekyll build</strong> to build the site only, or <strong>jekyll serve &#8211;watch</strong> to run the site on localhost (via WEBrick). Jekyll alone doesn&#8217;t handle any css preprocessors or javascript compilers so you&#8217;ll want to find or write a suitable plugin that handles your assets. I tried a few but the one I setted on is <a href='https://github.com/ryanaghdam/jekyll-asset-pipeline'>jekyll_asset_pipeline</a> and does everything I need right now: javascript minification, less preprocessing and asset bundling. In addition to asset management there are other things to consider plugins for like sitemaps and localization, there is a list of some in the <a href='http://jekyllrb.com/docs/plugins/'>jekyll docs</a>.</p>
+
+<p>Learn more about <a href='http://jekyllrb.com'>jekyll</a>, its really awesome!</p>
+<div class='highlight'><pre><code class='bash'><span class='nv'>$ </span>jekyll build 
+<span class='nv'>$ </span>git commit -am <span class='s2'>&quot;first post&quot;</span>
+<span class='nv'>$ </span>git push
+<span class='nv'>$ </span><span class='nb'>echo</span> <span class='s2'>&quot;profit&quot;</span>
+</code></pre></div>
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'didurestart';
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+              </div>
+            </div>
+            
+            <div class="footer">
+              <div class="contact">
+                
+              </div>
+            </div>
+          </div>
+        </div> <!-- /container -->
+
+        <!-- GA -->
+        <script> 
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-41207470-1', 'didurestart.com');
+          ga('send', 'pageview');
+
+        </script>
+
+    </body>
+</html>
